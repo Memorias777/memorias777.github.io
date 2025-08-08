@@ -1,12 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi sitio base - Memorias777</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio Memo - Ingeniero y Atleta</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+            color: #eee;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #f7c948; /* Amarillo fresco */
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #a8b2d1;
+        }
+
+        main {
+            max-width: 900px;
+            width: 100%;
+            background-color: rgba(25, 25, 40, 0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            color: #f7c948;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f7c948;
+            padding-bottom: 6px;
+            font-weight: 700;
+        }
+
+        p, ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #d1d9ff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-item {
+            background: #f7c948;
+            color: #1e1e2f;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 1rem;
+            user-select: none;
+            box-shadow: 0 4px 8px rgba(247, 201, 72, 0.6);
+            transition: transform 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.1);
+            cursor: default;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Bienvenido a mi sitio web base</h1>
-  <p>Este es el sitio principal en memorias777.github.io</p>
+    <header>
+        <h1>Memo Estrada</h1>
+        <p>Ingeniero en Ciencia de Datos & Atleta de Alto Rendimiento</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Acerca de mí</h2>
+            <p>
+                Soy Guillermo Eduardo Estrada Salazar, conocido como Memo. Soy estudiante apasionado, atleta dedicado y aspirante a ser el campeón nacional en 800 metros. Me esfuerzo cada día para alcanzar la excelencia tanto en el deporte como en mi formación académica en ingeniería.
+            </p>
+        </section>
+
+        <section id="objetivos">
+            <h2>Metas</h2>
+            <ul>
+                <li>Ser campeón nacional en la prueba de 800 metros.</li>
+                <li>Convertirme en el mejor de mi clase y dominar la ciencia de datos.</li>
+                <li>Entrar a una de las mejores universidades del mundo, como el MIT.</li>
+                <li>Desarrollar proyectos tecnológicos innovadores y aplicaciones propias.</li>
+                <li>Mantener una vida disciplinada, saludable y con un equilibrio entre deporte, estudio y música.</li>
+            </ul>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="skills-list">
+                <div class="skill-item">Atletismo (800m, Duatlón)</div>
+                <div class="skill-item">Ciencia de Datos</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Desarrollo Web (HTML, CSS, JS)</div>
+                <div class="skill-item">Inglés Avanzado</div>
+                <div class="skill-item">Matemáticas Avanzadas</div>
+                <div class="skill-item">Disciplina y Gestión del Tiempo</div>
+                <div class="skill-item">Música y Solfeo</div>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos Destacados</h2>
+            <ul>
+                <li><strong>Red Social Memo:</strong> Desarrollo de una app de mensajería para familiares y amigos, con planes de monetización y publicación en tiendas.</li>
+                <li><strong>Cinta Rota Films:</strong> Página web para productora de eventos, fiestas y videoclips con diseño moderno y paleta de colores personalizada.</li>
+                <li><strong>Entrenamiento y Competencias:</strong> Participación en duatlones y competencias nacionales, manteniendo un régimen disciplinado y planificado.</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Email: memo.estrada@example.com</p>
+            <p>WhatsApp: +52 492 196 43 76</p>
+            <p>GitHub: <a href="https://github.com/memorystudio" target="_blank" style="color:#f7c948;">https://github.com/memorystudio</a></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Guillermo Eduardo Estrada Salazar - Memo. Todos los derechos reservados.
+    </footer>
 </body>
 </html>
