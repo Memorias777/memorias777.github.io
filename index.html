@@ -1,191 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2838354068586892"
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2838354068586892"
      crossorigin="anonymous"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portafolio Memo - Ingeniero y Atleta</title>
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8" /> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memo Estrada - Portafolio Profesional</title>
+  <meta name="description" content="Memo Estrada, estudiante, atleta de alto rendimiento y aspirante a ingeniero en ciencia de datos. Descubre mis proyectos, habilidades y objetivos." />
+  <meta name="author" content="Guillermo Eduardo Estrada Salazar" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2216%22>🦾</text></svg>">
+  
+  <style>
+    /* Reset y estilo base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
-            color: #eee;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+      color: #eee;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+    }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
 
-        header h1 {
-            font-size: 3rem;
-            color: #f7c948; /* Amarillo fresco */
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            font-weight: 900;
-        }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #f7c948;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
 
-        header p {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #a8b2d1;
-        }
+    header p {
+      font-size: 1.3rem;
+      color: #a8b2d1;
+      font-weight: 600;
+    }
 
-        main {
-            max-width: 900px;
-            width: 100%;
-            background-color: rgba(25, 25, 40, 0.85);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-        }
+    main {
+      background-color: rgba(25, 25, 40, 0.85);
+      max-width: 900px;
+      width: 100%;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
 
-        section {
-            margin-bottom: 40px;
-        }
+    section {
+      margin-bottom: 3rem;
+    }
 
-        section h2 {
-            color: #f7c948;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #f7c948;
-            padding-bottom: 6px;
-            font-weight: 700;
-        }
+    section h2 {
+      color: #f7c948;
+      font-weight: 700;
+      font-size: 2rem;
+      border-bottom: 3px solid #f7c948;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
 
-        p, ul {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #d1d9ff;
-        }
+    p, ul {
+      font-size: 1.1rem;
+      color: #d1d9ff;
+    }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
 
-        ul li {
-            margin-bottom: 8px;
-        }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
 
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 0.5rem;
+    }
 
-        .skill-item {
-            background: #f7c948;
-            color: #1e1e2f;
-            font-weight: 700;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 1rem;
-            user-select: none;
-            box-shadow: 0 4px 8px rgba(247, 201, 72, 0.6);
-            transition: transform 0.2s ease;
-        }
+    .skill-item {
+      background: #f7c948;
+      color: #1e1e2f;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(247, 201, 72, 0.6);
+      transition: transform 0.2s ease;
+      user-select: none;
+      font-size: 1rem;
+    }
 
-        .skill-item:hover {
-            transform: scale(1.1);
-            cursor: default;
-        }
+    .skill-item:hover {
+      transform: scale(1.1);
+      cursor: default;
+    }
 
-        footer {
-            margin-top: 30px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #777;
-        }
+    a {
+      color: #f7c948;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2.2rem;
-            }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
 
-            main {
-                padding: 20px;
-            }
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
 
-            section h2 {
-                font-size: 1.6rem;
-            }
-        }
-    </style>
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      main {
+        padding: 1.5rem 1.8rem;
+      }
+
+      section h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Memo Estrada</h1>
-        <p>Ingeniero en Ciencia de Datos & Atleta de Alto Rendimiento</p>
-    </header>
+  <header>
+    <h1>Memo Estrada</h1>
+    <p>Ingeniero en Ciencia de Datos & Atleta de Alto Rendimiento</p>
+  </header>
 
-    <main>
-        <section id="about">
-            <h2>Acerca de mí</h2>
-            <p>
-                Soy Guillermo Eduardo Estrada Salazar, conocido como Memo. Soy estudiante apasionado, atleta dedicado y aspirante a ser el campeón nacional en 800 metros. Me esfuerzo cada día para alcanzar la excelencia tanto en el deporte como en mi formación académica en ingeniería.
-            </p>
-        </section>
+  <main>
+    <article id="about">
+      <h2>Acerca de mí</h2>
+      <p>
+        Soy Guillermo Eduardo Estrada Salazar, conocido como Memo. Soy estudiante dedicado y atleta de alto rendimiento en la prueba de 800 metros, con la meta de ser campeón nacional. Apasionado por la ciencia de datos, la programación y el desarrollo tecnológico.
+      </p>
+    </article>
 
-        <section id="objetivos">
-            <h2>Metas</h2>
-            <ul>
-                <li>Ser campeón nacional en la prueba de 800 metros.</li>
-                <li>Convertirme en el mejor de mi clase y dominar la ciencia de datos.</li>
-                <li>Entrar a una de las mejores universidades del mundo, como el MIT.</li>
-                <li>Desarrollar proyectos tecnológicos innovadores y aplicaciones propias.</li>
-                <li>Mantener una vida disciplinada, saludable y con un equilibrio entre deporte, estudio y música.</li>
-            </ul>
-        </section>
+    <article id="metas">
+      <h2>Mis Metas</h2>
+      <ul>
+        <li>Ser campeón nacional en 800 metros y destacar en atletismo.</li>
+        <li>Ser el mejor de mi clase y entrar a una universidad top mundial como el MIT.</li>
+        <li>Convertirme en un experto en ciencia de datos e ingeniería.</li>
+        <li>Desarrollar proyectos tecnológicos innovadores y aplicaciones propias.</li>
+        <li>Mantener disciplina diaria entre deporte, estudio y música.</li>
+      </ul>
+    </article>
 
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <div class="skills-list">
-                <div class="skill-item">Atletismo (800m, Duatlón)</div>
-                <div class="skill-item">Ciencia de Datos</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Desarrollo Web (HTML, CSS, JS)</div>
-                <div class="skill-item">Inglés Avanzado</div>
-                <div class="skill-item">Matemáticas Avanzadas</div>
-                <div class="skill-item">Disciplina y Gestión del Tiempo</div>
-                <div class="skill-item">Música y Solfeo</div>
-            </div>
-        </section>
+    <article id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="skills-list" aria-label="Lista de habilidades técnicas y deportivas">
+        <span class="skill-item">Atletismo (800m, Duatlón)</span>
+        <span class="skill-item">Ciencia de Datos</span>
+        <span class="skill-item">Python</span>
+        <span class="skill-item">Desarrollo Web (HTML, CSS, JS)</span>
+        <span class="skill-item">Inglés Avanzado</span>
+        <span class="skill-item">Matemáticas Avanzadas</span>
+        <span class="skill-item">Disciplina y Gestión del Tiempo</span>
+        <span class="skill-item">Música y Solfeo</span>
+      </div>
+    </article>
 
-        <section id="proyectos">
-            <h2>Proyectos Destacados</h2>
-            <ul>
-                <li><strong>Red Social Memo:</strong> Desarrollo de una app de mensajería para familiares y amigos, con planes de monetización y publicación en tiendas.</li>
-                <li><strong>Cinta Rota Films:</strong> Página web para productora de eventos, fiestas y videoclips con diseño moderno y paleta de colores personalizada.</li>
-                <li><strong>Entrenamiento y Competencias:</strong> Participación en duatlones y competencias nacionales, manteniendo un régimen disciplinado y planificado.</li>
-            </ul>
-        </section>
+    <article id="proyectos">
+      <h2>Proyectos Destacados</h2>
+      <ul>
+        <li><strong>Red Social Memo:</strong> App de mensajería familiar con planes de monetización y publicación en tiendas.</li>
+        <li><strong>Cinta Rota Films:</strong> Página web para productora de eventos y videoclips, diseño moderno y funcional.</li>
+        <li><strong>Entrenamiento y Competencias:</strong> Participación en duatlones y competencias nacionales con régimen disciplinado.</li>
+      </ul>
+    </article>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Email: memo.estrada@example.com</p>
-            <p>WhatsApp: +52 492 196 43 76</p>
-            <p>GitHub: <a href="https://github.com/memorystudio" target="_blank" style="color:#f7c948;">https://github.com/memorystudio</a></p>
-        </section>
-    </main>
+    <article id="contacto">
+      <h2>Contacto</h2>
+      <p>Email: <a href="mailto:memo.estrada@example.com">memo.estrada@example.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/524921964376" target="_blank" rel="noopener">+52 492 196 43 76</a></p>
+      <p>GitHub: <a href="https://github.com/memorystudio" target="_blank" rel="noopener">github.com/memorystudio</a></p>
+    </article>
+  </main>
 
-    <footer>
-        &copy; 2025 Guillermo Eduardo Estrada Salazar - Memo. Todos los derechos reservados.
-    </footer>
+  <footer>
+    &copy; 2025 Guillermo Eduardo Estrada Salazar - Memo. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
 </body>
 </html>
