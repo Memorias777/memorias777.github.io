@@ -1,209 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2838354068586892"
-     crossorigin="anonymous"></script>
-    <meta charset="UTF-8" /> 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Memo Estrada - Portafolio Profesional</title>
-  <meta name="description" content="Memo Estrada, estudiante, atleta de alto rendimiento y aspirante a ingeniero en ciencia de datos. Descubre mis proyectos, habilidades y objetivos." />
-  <meta name="author" content="Guillermo Eduardo Estrada Salazar" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2216%22>🦾</text></svg>">
-  
-  <style>
-    /* Reset y estilo base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0; padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
-      color: #eee;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5rem;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-      color: #f7c948;
-      text-transform: uppercase;
-      margin-bottom: 0.3rem;
-    }
-
-    header p {
-      font-size: 1.3rem;
-      color: #a8b2d1;
-      font-weight: 600;
-    }
-
-    main {
-      background-color: rgba(25, 25, 40, 0.85);
-      max-width: 900px;
-      width: 100%;
-      border-radius: 12px;
-      padding: 2rem 2.5rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    section h2 {
-      color: #f7c948;
-      font-weight: 700;
-      font-size: 2rem;
-      border-bottom: 3px solid #f7c948;
-      padding-bottom: 0.4rem;
-      margin-bottom: 1rem;
-    }
-
-    p, ul {
-      font-size: 1.1rem;
-      color: #d1d9ff;
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
-    }
-
-    ul li {
-      margin-bottom: 0.7rem;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 0.5rem;
-    }
-
-    .skill-item {
-      background: #f7c948;
-      color: #1e1e2f;
-      font-weight: 700;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      box-shadow: 0 4px 8px rgba(247, 201, 72, 0.6);
-      transition: transform 0.2s ease;
-      user-select: none;
-      font-size: 1rem;
-    }
-
-    .skill-item:hover {
-      transform: scale(1.1);
-      cursor: default;
-    }
-
-    a {
-      color: #f7c948;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover, a:focus {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      main {
-        padding: 1.5rem 1.8rem;
-      }
-
-      section h2 {
-        font-size: 1.6rem;
-      }
-    }
-
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memo's Canvas - Blog & Proyectos</title>
+    <meta name="description" content="El portafolio dinámico de Guillermo Estrada, con blog técnico, proyectos de desarrollo y la historia de un atleta-programador.">
+    <meta name="author" content="Guillermo Eduardo Estrada Salazar" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2216%22>🎨</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>Memo Estrada</h1>
-    <p>Ingeniero en Ciencia de Datos & Atleta de Alto Rendimiento</p>
-  </header>
+<body class="light-mode">
 
-  <main>
-    <article id="about">
-      <h2>Acerca de mí</h2>
-      <p>
-        Soy Guillermo Eduardo Estrada Salazar, conocido como Memo. Soy estudiante dedicado y atleta de alto rendimiento en la prueba de 800 metros, con la meta de ser campeón nacional. Apasionado por la ciencia de datos, la programación y el desarrollo tecnológico.
-      </p>
-    </article>
+    <nav class="sidebar-nav">
+        <button class="close-btn">&times;</button>
+        <ul class="nav-links">
+            <li><a href="#blog" data-target="blog">Blog de Memo</a></li>
+            <li><a href="#proyectos" data-target="proyectos">Mis Proyectos</a></li>
+        </ul>
+        <div class="theme-switcher">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </nav>
+    
+    <button class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
 
-    <article id="metas">
-      <h2>Mis Metas</h2>
-      <ul>
-        <li>Ser campeón nacional en 800 metros y destacar en atletismo.</li>
-        <li>Ser el mejor de mi clase y entrar a una universidad top mundial como el MIT.</li>
-        <li>Convertirme en un experto en ciencia de datos e ingeniería.</li>
-        <li>Desarrollar proyectos tecnológicos innovadores y aplicaciones propias.</li>
-        <li>Mantener disciplina diaria entre deporte, estudio y música.</li>
-      </ul>
-    </article>
+    <main class="content-container">
+        <section id="blog" class="active-section section-content">
+            <div class="intro-card">
+                <h1 class="glitch" data-text="Hola, soy Memo">Hola, soy Memo</h1>
+                <p class="subtitle">Atleta, estudiante, aspirante a ingeniero en ciencia de datos.</p>
+            </div>
 
-    <article id="habilidades">
-      <h2>Habilidades</h2>
-      <div class="skills-list" aria-label="Lista de habilidades técnicas y deportivas">
-        <span class="skill-item">Atletismo (800m, Duatlón)</span>
-        <span class="skill-item">Ciencia de Datos</span>
-        <span class="skill-item">Python</span>
-        <span class="skill-item">Desarrollo Web (HTML, CSS, JS)</span>
-        <span class="skill-item">Inglés Avanzado</span>
-        <span class="skill-item">Matemáticas Avanzadas</span>
-        <span class="skill-item">Disciplina y Gestión del Tiempo</span>
-        <span class="skill-item">Música y Solfeo</span>
-      </div>
-    </article>
+            <div class="bio-content">
+                <p>Soy un estudiante mexicano de preparatoria, atleta de alto rendimiento y apasionado por la tecnología, los negocios y la ciencia de datos.</p>
+                <p>Tengo 15 años y vivo en Zacatecas, pero mi visión y ambición son globales: quiero destacar como uno de los mejores ingenieros en ciencia de datos del mundo y estudiar en una de las mejores universidades del planeta, como el MIT.</p>
+                <p>En el deporte, compito en atletismo, natación y duatlón, con disciplina diaria y objetivos claros: ser campeón nacional.</p>
+                <p>En lo académico, me exijo sacar las mejores calificaciones mientras aprendo por mi cuenta programación, desarrollo web, matemáticas avanzadas e inteligencia artificial.</p>
+                <p>En los negocios, ya he iniciado pequeños proyectos propios, desde ventas físicas hasta el desarrollo de aplicaciones web con planes de monetización.</p>
+                <p>Mi vida está guiada por una filosofía simple: disciplina, mejora continua y visión a largo plazo.</p>
+                <p>Trabajo para que cada día mis proyectos reflejen mi creatividad y mis habilidades técnicas, construyendo un portafolio que hable por mí cuando llegue el momento de postular a universidades y empresas tecnológicas de alto nivel.</p>
+                <p>En este blog encontrarás mis proyectos, ideas, aprendizajes y experimentos, tanto técnicos como personales.</p>
+                <p>Es mi espacio para documentar mi camino hacia mis metas, compartir lo que sé y demostrar lo que puedo lograr.</p>
+                <p class="quote">“No espero que las oportunidades lleguen, las construyo.”</p>
+            </div>
 
-    <article id="proyectos">
-      <h2>Proyectos Destacados</h2>
-      <ul>
-        <li><strong>Red Social Memo:</strong> App de mensajería familiar con planes de monetización y publicación en tiendas.</li>
-        <li><strong>Cinta Rota Films:</strong> Página web para productora de eventos y videoclips, diseño moderno y funcional.</li>
-        <li><strong>Entrenamiento y Competencias:</strong> Participación en duatlones y competencias nacionales con régimen disciplinado.</li>
-      </ul>
-    </article>
+            <h2 class="section-title">Últimos posts</h2>
+            <div class="blog-grid">
+                </div>
+        </section>
 
-    <article id="contacto">
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:memo.estrada@example.com">memo.estrada@example.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/524921964376" target="_blank" rel="noopener">+52 492 196 43 76</a></p>
-      <p>GitHub: <a href="https://github.com/memorystudio" target="_blank" rel="noopener">github.com/memorystudio</a></p>
-    </article>
-  </main>
+        <section id="proyectos" class="section-content hidden-section">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <p class="section-subtitle">El código cobra vida. Pega una URL para previsualizar.</p>
+            
+            <div class="url-input-container">
+                <input type="url" id="project-url" placeholder="Pega la URL de tu proyecto aquí">
+                <button id="load-preview-btn">Cargar Vista Previa</button>
+            </div>
 
-  <footer>
-    &copy; 2025 Guillermo Eduardo Estrada Salazar - Memo. Todos los derechos reservados.
-  </footer>
-</body>
-</html>
+            <div id="project-preview-container" class="project-preview-container">
+                <div class="preview-message">
+                    <span>Carga un proyecto para ver la previsualización.</span>
+                </div>
+                <iframe id="project-iframe" frameborder="0" sandbox="allow-same-origin allow-scripts"></iframe>
+            </div>
+
+            <div class="project-list">
+                <a href="https://cintarotafilms.com" target="_blank" class="project-link" rel="noopener noreferrer">
+                    <img src="https://placehold.co/100x100/1f1f1f/f0f0f0?text=CRT" alt="Preview de Cinta Rota Films">
+                    <span>Cinta Rota Films</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Memo's Canvas. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos de Uso</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
