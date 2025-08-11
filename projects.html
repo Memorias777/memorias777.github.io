@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memorias777 — Proyectos</title>
+  <meta name="description" content="Galería de proyectos de Memo: apps, webs y experimentos.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="hamburger" aria-label="Abrir menú" id="hamburger2" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="sidebar" id="sidebar2" aria-hidden="true">
+    <div class="sidebar-inner">
+      <button class="close-sidebar" id="closeSidebar2" aria-label="Cerrar menú">&times;</button>
+      <h3 class="brand">Memo — Memorias777</h3>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Blog</a></li>
+        <li><a href="projects.html" class="nav-link active">Proyectos</a></li>
+        <li><a href="index.html#about" class="nav-link">Sobre mí</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <div class="theme-row">
+        <label class="switch">
+          <input type="checkbox" id="themeToggle2">
+          <span class="slider"></span>
+        </label>
+        <small id="themeLabel2">Modo Oscuro</small>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero small">
+    <div class="hero-inner">
+      <h1 class="hero-title">Proyectos</h1>
+      <p class="hero-sub">Código, diseño y experimentos que cuentan mi historia técnica.</p>
+      <a class="btn primary" href="index.html">Volver al Blog</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="panel projects">
+      <div class="panel-inner container">
+        <h2 class="section-title">Galería de proyectos</h2>
+        <div class="grid" id="projectGrid" aria-live="polite">
+          <!-- tarjetas renderizadas por JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year2"></span> Memo — Memorias777</p>
+      <div class="footer-links">
+        <a class="link" href="#">Política de Privacidad</a>
+        <a class="link" href="#">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

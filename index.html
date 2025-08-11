@@ -1,143 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Memorias777 - Memo</title>
-<style>
-    /* 🎨 Paleta de colores */
-    :root {
-        --mint: #3FE0C5;
-        --mint-light: #8FF5E4;
-        --mint-dark: #2AB3A0;
-        --bg-light: #f9f9f9;
-        --bg-dark: #101010;
-        --text-light: #1a1a1a;
-        --text-dark: #f5f5f5;
-        --card-light: rgba(255, 255, 255, 0.8);
-        --card-dark: rgba(20, 20, 20, 0.8);
-        --gradient-light: linear-gradient(135deg, var(--mint), var(--mint-light));
-        --gradient-dark: linear-gradient(135deg, var(--mint-dark), var(--mint));
-    }
-
-    /* 🖼 Fondo y modo oscuro */
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        transition: all 0.3s ease;
-    }
-    body.light-mode {
-        background: var(--gradient-light);
-        color: var(--text-light);
-    }
-    body.dark-mode {
-        background: var(--gradient-dark);
-        color: var(--text-dark);
-    }
-
-    /* 📌 Layout general */
-    header {
-        text-align: center;
-        padding: 2rem;
-    }
-    .glitch {
-        font-size: 3rem;
-        font-weight: bold;
-        background: var(--gradient-light);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: glow 3s infinite alternate;
-    }
-    @keyframes glow {
-        from { text-shadow: 0 0 10px var(--mint); }
-        to { text-shadow: 0 0 20px var(--mint-light); }
-    }
-
-    /* 📜 Tarjetas estilo glassmorphism */
-    .container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 1rem;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-    .card {
-        background: var(--card-light);
-        backdrop-filter: blur(10px);
-        border-radius: 16px;
-        padding: 1.5rem;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        transition: all 0.3s ease;
-    }
-    body.dark-mode .card {
-        background: var(--card-dark);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .card:hover {
-        transform: translateY(-6px) scale(1.02);
-        box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-    }
-
-    /* 🧭 Botón de modo oscuro */
-    .toggle-theme {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: var(--mint);
-        border: none;
-        padding: 10px 16px;
-        border-radius: 8px;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    .toggle-theme:hover {
-        background: var(--mint-dark);
-    }
-
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memorias777 — Blog</title>
+  <meta name="description" content="Blog de Memo: proyectos, aprendizaje y entrenamiento.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-mode">
+<body>
+  <!-- HAMBURGER -->
+  <button class="hamburger" aria-label="Abrir menú" id="hamburger" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 
-    <button class="toggle-theme">🌙 Modo Oscuro</button>
+  <!-- SIDEBAR -->
+  <nav class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar-inner">
+      <button class="close-sidebar" id="closeSidebar" aria-label="Cerrar menú">&times;</button>
+      <h3 class="brand">Memo — Memorias777</h3>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active">Blog</a></li>
+        <li><a href="projects.html" class="nav-link">Proyectos</a></li>
+        <li><a href="#about" class="nav-link">Sobre mí</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
+      </ul>
 
-    <header>
-        <h1 class="glitch">Hola, soy Memo</h1>
-        <p>Estudiante, atleta y creador de proyectos que combinan tecnología, deporte y visión global.</p>
-    </header>
+      <div class="theme-row">
+        <label class="switch">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider"></span>
+        </label>
+        <small id="themeLabel">Modo Oscuro</small>
+      </div>
+    </div>
+  </nav>
 
-    <main class="container">
-        <div class="card">
-            <h2>💻 Proyecto 1</h2>
-            <p>Descripción breve del proyecto. Algo que muestre tu capacidad técnica y creatividad.</p>
+  <!-- MAIN -->
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Hola, soy <span class="accent">Memo</span></h1>
+      <p class="hero-sub">Estudiante • Atleta • Future Data Engineer — Documentando el camino con código y disciplina.</p>
+      <div class="hero-ctas">
+        <a class="btn primary" id="ctaProjects" href="projects.html">Ver Proyectos</a>
+        <a class="btn ghost" href="#latest">Últimos Posts</a>
+      </div>
+    </div>
+    <div class="hero-deco" aria-hidden="true"></div>
+  </header>
+
+  <main class="page">
+    <section id="about" class="panel about">
+      <div class="panel-inner container">
+        <div class="bio glass">
+          <h2>Sobre mí</h2>
+          <p>Soy Guillermo Eduardo "Memo" Estrada, un estudiante de preparatoria de Zacatecas que entrena atletismo, natación y duatlón. Me apasionan la ciencia de datos, el desarrollo web y crear proyectos con impacto real.</p>
+          <p class="muted">Disciplina, mejora continua y visión a largo plazo.</p>
         </div>
-        <div class="card">
-            <h2>📊 Proyecto 2</h2>
-            <p>Visualizaciones de datos interactivas o herramientas útiles que has desarrollado.</p>
+        <div class="stats glass">
+          <div class="stat">
+            <h3>15</h3><p>Años</p>
+          </div>
+          <div class="stat">
+            <h3>Atleta</h3><p>Entrenamiento diario</p>
+          </div>
+          <div class="stat">
+            <h3>Proyectos</h3><p>En desarrollo</p>
+          </div>
         </div>
-        <div class="card">
-            <h2>🏃‍♂️ Entrenamiento</h2>
-            <p>Diario de entrenamiento y metas deportivas rumbo a ser campeón nacional.</p>
+      </div>
+    </section>
+
+    <section id="latest" class="panel latest">
+      <div class="panel-inner container">
+        <h2 class="section-title">Últimos posts</h2>
+        <div class="grid" id="blogGrid" aria-live="polite">
+          <!-- tarjetas renderizadas por JS -->
         </div>
-    </main>
+      </div>
+    </section>
+  </main>
 
-<script>
-    // 🌗 Toggle Dark/Light Mode
-    const btnTheme = document.querySelector(".toggle-theme");
-    const body = document.body;
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Memo — Memorias777</p>
+      <div class="footer-links">
+        <a class="link" href="#">Política de Privacidad</a>
+        <a class="link" href="#">Términos</a>
+      </div>
+    </div>
+  </footer>
 
-    btnTheme.addEventListener("click", () => {
-        if (body.classList.contains("light-mode")) {
-            body.classList.replace("light-mode", "dark-mode");
-            btnTheme.textContent = "☀️ Modo Claro";
-        } else {
-            body.classList.replace("dark-mode", "light-mode");
-            btnTheme.textContent = "🌙 Modo Oscuro";
-        }
-    });
-</script>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
